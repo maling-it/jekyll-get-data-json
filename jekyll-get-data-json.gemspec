@@ -2,10 +2,10 @@ lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "jekyll-get-json/version"
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-get-json"
+  spec.name          = "jekyll-get-data-json"
   spec.summary       = "Import remote JSON data into the data for a Jekyll site"
   spec.description   = "Import remote JSON data into the data for a Jekyll site"
-  spec.version       = JekyllGetJson::VERSION
+  spec.version       = JekyllGetDataJson::VERSION
   spec.authors       = ["Brock Fanning"]
   spec.email         = ["brockfanning@gmail.com"]
   spec.homepage      = "https://github.com/brockfanning/jekyll-get-json"

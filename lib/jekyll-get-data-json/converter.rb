@@ -3,14 +3,14 @@ require 'json'
 require 'deep_merge'
 require 'open-uri'
 
-module JekyllGetJson
+module JekyllGetDataJson
   class GetJsonGenerator < Jekyll::Generator
     safe true
     priority :highest
 
     def generate(site)
 
-      config = site.config['jekyll_get_json']
+      config = site.data['getjson']
       if !config
         warn "No config".yellow
         return

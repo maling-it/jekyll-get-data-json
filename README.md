@@ -1,19 +1,20 @@
-# jekyll-get-json
+# jekyll-get-data-json
 
 > 💎 Import remote JSON data into the data for a Jekyll site
 
+> This version uses the `_data` folder so that you can more freely manage without having to restart jekyll
 ## Installation
 
-1. Use `bundle add jekyll-get-json` to add this to your site's Gemfile.
+1. Use `bundle add jekyll-get-data-json` to add this to your site's Gemfile.
 2. Add this plugin to the `plugins` listed in your `_config.yml` file. For example:
     ```
     plugins:
-      - jekyll-get-json
+      - jekyll-get-data-json
     ```
-
+Or you can download the [converter.rb](https://raw.githubusercontent.com/maling-it/jekyll-get-data-json/master/lib/jekyll-get-json/converter.rb) file and put it in the _plugins . folder
 ## Usage
 
-Add a `jekyll_get_json` section to your `_config.yml` file. This section should be an array of objects containing `data` and `json` properties:
+Create a `getjson.yml` file inside your `_data` folder. This section should be an object array containing the `data` and `json` properties:
 * The `data` property specifies where in the `site.data` you would like to put this data.
 * The `json` property is the remote URL of the JSON file.
 
@@ -23,9 +24,8 @@ To illustrate an example, assuming that you have a remote JSON file at `https://
   "bar": "Success!"
 }
 ```
-And you put the following into your `_config.yml` file:
+And you put the following into your `getjson.yml` file:
 ```
-jekyll_get_json:
   - data: foo
     json: 'https://example.com/data.json'
 ```
@@ -41,3 +41,5 @@ Success!
 ## Credit
 
 This plugin is basically a more limited version of [jekyll-get](https://github.com/18F/jekyll-get), duplicated here purely for the purposes of making it a Ruby gem.
+
+This plugin is basically another version of [jekyll-get-json](https://github.com/brockfanning/jekyll-get-json), duplicated here purely for better usage purposes.
