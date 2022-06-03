@@ -11,7 +11,7 @@
     plugins:
       - jekyll-get-data-json
     ```
-Or you can download the [converter.rb](https://raw.githubusercontent.com/maling-it/jekyll-get-data-json/master/lib/jekyll-get-json/converter.rb) file and put it in the _plugins . folder
+Or you can download the [converter.rb](https://raw.githubusercontent.com/maling-it/jekyll-get-data-json/master/lib/jekyll-get-data-json/converter.rb) file and put it in the _plugins . folder
 ## Usage
 
 Create a `getjson.yml` file inside your `_data` folder. This section should be an object array containing the `data` and `json` properties:
